@@ -190,10 +190,10 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyD-PRal5Ne-kIaVRumNozQCdWLQUwif41Q",
@@ -206,12 +206,12 @@
   };
 
   const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
   const db = getFirestore(app);
 
   const reviewForm = document.querySelector(".review-form");
   const reviewsGrid = document.querySelector(".reviews-grid");
 
-  // Загружаем отзывы из Firestore
   async function loadReviews() {
     const snapshot = await getDocs(collection(db, "reviews"));
     snapshot.forEach(doc => {
@@ -225,7 +225,6 @@
 
   loadReviews();
 
-  // Обработка отправки формы
   reviewForm.addEventListener("submit", async function (e) {
     e.preventDefault();
     const name = this.name.value.trim();
