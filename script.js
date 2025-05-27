@@ -130,10 +130,28 @@ document.querySelectorAll(".closeModal").forEach(btn => {
 // Submit Result
 document.getElementById("submitBtn").addEventListener("click", () => {
   const name = document.getElementById("username").value.trim();
+  const result = finalResult.textContent;
+
   if (name) {
-    alert(`Результат отправлен! Спасибо, ${name}.`);
-    resultModal.style.display = "none";
-    resetTest();
+    const data = new FormData();
+    data.append("Имя", name);
+    data.append("Результат", result);
+
+    fetch("https://formspree.io/f/xvgajelw", {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert(`Результат отправлен! Спасибо, ${name}.`);
+        resultModal.style.display = "none";
+        resetTest();
+      } else {
+        alert("Ошибка отправки. Попробуйте позже.");
+      }
+    });
   } else {
     alert("Пожалуйста, введите имя.");
   }

@@ -191,5 +191,60 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-PRal5Ne-kIaVRumNozQCdWLQUwif41Q",
+    authDomain: "english-school-e00ae.firebaseapp.com",
+    projectId: "english-school-e00ae",
+    storageBucket: "english-school-e00ae.firebasestorage.app",
+    messagingSenderId: "1066152327087",
+    appId: "1:1066152327087:web:62ee27805fbf29d822215a",
+    measurementId: "G-3KBRYMZDDE"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const reviewForm = document.querySelector(".review-form");
+  const reviewsGrid = document.querySelector(".reviews-grid");
+
+  // Загружаем отзывы из Firestore
+  async function loadReviews() {
+    const snapshot = await getDocs(collection(db, "reviews"));
+    snapshot.forEach(doc => {
+      const { name, comment } = doc.data();
+      const card = document.createElement("div");
+      card.className = "review-card";
+      card.innerHTML = `<h3>${name}</h3><p>${comment}</p>`;
+      reviewsGrid.appendChild(card);
+    });
+  }
+
+  loadReviews();
+
+  // Обработка отправки формы
+  reviewForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const name = this.name.value.trim();
+    const comment = this.comment.value.trim();
+
+    if (name && comment) {
+      await addDoc(collection(db, "reviews"), { name, comment });
+
+      const card = document.createElement("div");
+      card.className = "review-card";
+      card.innerHTML = `<h3>${name}</h3><p>${comment}</p>`;
+      reviewsGrid.appendChild(card);
+
+      this.reset();
+      alert("Спасибо за ваш отзыв!");
+    } else {
+      alert("Пожалуйста, заполните все поля.");
+    }
+  });
+</script>
 </body>
 </html>
