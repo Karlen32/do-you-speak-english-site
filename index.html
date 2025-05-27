@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -11,13 +10,13 @@
 </head>
 <body>
   <header>
-    <div class="header-logo">
-      <img src="images/logo.png" alt="Логотип школы" style="max-width: 100%; height: auto; width: 60px; margin-right: 10px;">
+    <a href="#home" class="header-logo">
+      <img src="images/logo.png" alt="Логотип школы">
       <h1>Do you speak English</h1>
-    </div>
+    </a>
     <button class="menu-toggle" aria-label="Меню">
-  <i class="fas fa-bars"></i>
-</button>
+      <i class="fas fa-bars"></i>
+    </button>
     <nav>
       <a href="#about">О школе</a>
       <a href="#teacher">Преподаватель</a>
@@ -99,21 +98,21 @@
     <div class="courses-grid">
       <a href="#form" class="card-link">
         <div class="price-card">
-          <h3>Повседневное общение</h3>
+          <h3><i class="fas fa-comments"></i> Повседневное общение</h3>
           <p>Базовый курс английского языка</p>
           <p class="price">1000 ₽ / урок</p>
         </div>
       </a>
       <a href="#form" class="card-link">
         <div class="price-card">
-          <h3>Подготовка к экзаменам</h3>
+          <h3><i class="fas fa-graduation-cap"></i> Подготовка к экзаменам</h3>
           <p>Курс для сдачи международных экзаменов</p>
           <p class="price">1300 ₽ / урок</p>
         </div>
       </a>
       <a href="#form" class="card-link">
         <div class="price-card">
-          <h3>Деловой английский</h3>
+          <h3><i class="fas fa-briefcase"></i> Деловой английский</h3>
           <p>Курс для профессионального общения</p>
           <p class="price">1600 ₽ / урок</p>
         </div>
@@ -170,17 +169,26 @@
       <button type="submit">Отправить отзыв</button>
     </form>
   </section>
-
-  <section id="form" class="form-section">
+<section id="form" class="form-section">
     <h2>Записаться на урок</h2>
-    <form action="mailto:siuzanna0902@gmail.com" method="POST" enctype="text/plain">
+    <form id="lessonForm">
       <input type="text" name="name" placeholder="Ваше имя" required>
       <input type="text" name="contact" placeholder="Контакт" required>
       <input type="text" name="age" placeholder="Возраст ученика">
       <textarea name="comment" placeholder="Если есть что добавить"></textarea>
       <button type="submit">Отправить</button>
     </form>
+    <div id="formMessage" style="display:none; text-align:center; margin-top:10px; color:green;">
+      Спасибо! Ваша заявка отправлена.
+    </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Контакты: siuzanna0902@gmail.com</p>
+      <p>© 2025 Do you speak English</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

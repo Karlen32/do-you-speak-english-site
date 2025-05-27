@@ -45,7 +45,6 @@ const nextBtn = document.getElementById("nextBtn");
 const checkBtn = document.getElementById("checkBtn");
 const finalResult = document.getElementById("finalResult");
 
-// Render Question Function
 function renderQuestion(index) {
   const q = questions[index];
   let html = `<p>${q.question}</p>`;
@@ -53,8 +52,13 @@ function renderQuestion(index) {
     html += `<label><input type="radio" name="q${index}" value="${i}" ${answers[index] === i ? 'checked' : ''}> ${opt}</label><br>`;
   });
   questionContainer.innerHTML = html;
-  
-  // Update button states
+
+  const radios = document.querySelectorAll(`input[name="q${index}"]`);
+  radios.forEach(radio => radio.addEventListener("change", () => {
+    nextBtn.disabled = !document.querySelector(`input[name="q${index}"]:checked`);
+  }));
+  nextBtn.disabled = !document.querySelector(`input[name="q${index}"]:checked`);
+
   prevBtn.disabled = index === 0;
   nextBtn.style.display = index === questions.length - 1 ? "none" : "inline-block";
   checkBtn.style.display = index === questions.length - 1 ? "inline-block" : "none";
@@ -154,4 +158,24 @@ const nav = document.querySelector('header nav');
 
 menuToggle.addEventListener('click', () => {
   nav.classList.toggle('active');
+});
+// Lesson Form Submission
+document.getElementById("lessonForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  fetch("https://formspree.io/f/xvgajelw", {
+    method: "POST",
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById("formMessage").style.display = "block";
+      this.reset();
+    } else {
+      alert("Ошибка отправки. Попробуйте позже.");
+    }
+  });
 });
