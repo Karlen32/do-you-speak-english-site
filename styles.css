@@ -1,0 +1,616 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header */
+header {
+  background-color: #001f3f;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+header nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #F5FFFA;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  background-color: #0074D9;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* Full Width Image */
+.full-width-image {
+  width: 100%;
+  height: 80vh;
+  background: url('https://i.ibb.co/vC754fXV/JSLHR-59-1-39fig0.jpg') center/cover no-repeat;
+}
+
+/* Teacher Section */
+.teacher-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.teacher-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.teacher-photo {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.teacher-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.fa-instagram { color: #E4405F; }
+.fa-facebook { color: #1877F2; }
+.fa-vk { color: #4C75A3; }
+.fa-whatsapp { color: #25D366; }
+.fa-telegram { color: #0088cc; }
+
+/* Test Section */
+.test-section {
+  background-color: #e6f0ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.test-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 60px 20px;
+  background-color: #f0f4f8;
+}
+
+.courses-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.courses-description {
+  text-align: center;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.price-card {
+  flex: 1 1 250px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  max-width: 300px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.price-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.price-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.price-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* English Future Section */
+.english-future {
+  background: url('https://i.ibb.co/LTBWhPX/composite-image-youn.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.future-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.future-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.future-content p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Why Us Section */
+.why-us-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.why-us-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.why-us-section p {
+  text-align: center;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.benefit-card {
+  flex: 1 1 250px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 300px;
+}
+
+.benefit-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.benefit-card p {
+  font-size: 14px;
+}
+
+/* Reviews Section */
+.reviews-section {
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+.reviews-section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.review-card h3 {
+  margin: 5px 0;
+}
+
+.review-card p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.review-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.review-form h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.review-form textarea {
+  height: 100px;
+}
+
+.review-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Form Section */
+.form-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-section input,
+.form-section textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  padding: 0.75rem;
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  nav {
+    margin-top: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .teacher-section {
+    flex-direction: column;
+  }
+}
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  /* Шапка */
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .header-logo {
+    margin-bottom: 15px;
+  }
+  
+  .header-logo h1 {
+    font-size: 20px;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  nav a {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+
+  /* Герой-секция */
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Преподаватель */
+  .teacher-section {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  
+  .teacher-text, .teacher-photo {
+    min-width: 100%;
+  }
+  
+  .teacher-photo img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Курсы */
+  .courses-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .price-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Почему мы */
+  .benefits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .benefit-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Отзывы */
+  .reviews-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .review-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Формы */
+  .review-form, .form-section form {
+    padding: 15px;
+  }
+  
+  input, textarea, button {
+    font-size: 16px; /* Увеличиваем для удобства на мобильных */
+  }
+
+  /* Модальные окна */
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+  }
+  
+  .modal-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Еще более мелкие устройства */
+  .hero h1 {
+    font-size: 24px;
+  }
+  
+  .hero .button {
+    width: 90%;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  /* Социальные иконки */
+  .social-links a {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Карточки */
+  .price-card, .benefit-card, .review-card {
+    padding: 15px;
+  }
+}
+/* Full Width Image Optimization */
+.full-width-image {
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 480px) {
+  .full-width-image {
+    height: 40vh;
+  }
+}
+/* Burger Menu Styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 15px;
+  }
+  
+  nav.active {
+    display: flex;
+  }
+  
+  nav a {
+    margin: 5px 0;
+    padding: 8px;
+    text-align: center;
+  }
+}

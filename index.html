@@ -1,151 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Do you speak English</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background-color: #fff;
-    }
-    header {
-      background-color: #001f3f;
-      color: white;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header nav a {
-      color: rgb(255, 255, 255);
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: #F5FFFA;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero a.button {
-      background-color: #0074D9;
-      color: white;
-      padding: 0.75rem 2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .section {
-      padding: 4rem 2rem;
-    }
-    .section img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    .teacher {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
-    }
-    .teacher img {
-      width: 300px;
-      border-radius: 10px;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .service {
-      background: #F5FFFA;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .quote {
-      background-color: #0074D9;
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      font-size: 1.25rem;
-    }
-    .reviews, .form-section {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .form-section form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      padding: 0.75rem;
-      background-color: #001f3f;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
-  <style>
-  .card-link {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .price-card {
-    flex: 1 1 250px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    max-width: 300px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .price-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  }
-</style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
-  <!-- Логотип и название -->
-  <div style="display: flex; align-items: center;">
-    <img src="images/logo.png" alt="Логотип школы" style="height: 60px; margin-right: 10px;">
-    <h1 style="font-size: 24px; margin: 0;">Do you speak English</h1>
-  </div>
+  <header>
+    <div class="header-logo">
+      <img src="images/logo.png" alt="Логотип школы" style="max-width: 100%; height: auto; width: 60px; margin-right: 10px;">
+      <h1>Do you speak English</h1>
+    </div>
+    <button class="menu-toggle" aria-label="Меню">
+  <i class="fas fa-bars"></i>
+</button>
     <nav>
       <a href="#about">О школе</a>
       <a href="#teacher">Преподаватель</a>
@@ -154,333 +26,162 @@
       <a href="#contacts">Контакты</a>
     </nav>
   </header>
-  
 
   <section id="about" class="hero">
-    <h1 style="font-family: 'Poppins', sans-serif; font-size: 56px; color: #000000;">Do you speak English</h1>
-    <p>Овладейте английским легко и с уверенностью. Преодолейте языковой барьер и начните говорить свободно с помощью индивидуальных занятий, адаптированных под ваши цели. Занимайтесь с опытным преподавателем, прошедшим путь от работы за рубежом до создания авторской методики — более 15 лет успешной практики.</p>
+    <h1>Do you speak English</h1>
+    <p>Овладейте английским легко и с уверенностью. Преодолейте языковой барьер и начните говорить свободно с помощью индивидуальных занятий, адаптированных под ваши цели.</p>
     <a href="#form" class="button">Записаться на урок</a>
   </section>
 
-  <section style="
-  width: 100%;
-  height: 80vh;
-  background: url('https://i.ibb.co/vC754fXV/JSLHR-59-1-39fig0.jpg') center center / cover no-repeat;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
-">
-</section>
+  <section class="full-width-image"></section>
 
-  <section id="teacher" class="teacher-section" style="display: flex; align-items: center; gap: 40px; padding: 60px 20px;">
-    <div class="teacher-text" style="flex: 1;">
-      <h2 style="font-size: 28px; margin-bottom: 20px;">О преподавателе</h2>
-      <p style="font-size: 18px; line-height: 1.6;">
-        Меня зовут Сюзанна. Я преподаватель английского языка с 15-летним опытом.
-        Работала за рубежом, преподавала в школах, а сейчас веду свою авторскую онлайн-программу.
-        Помогаю ученикам заговорить уверенно и без страха. Уроки адаптированы под ваш уровень, цели и стиль обучения.
-      </p>
-      <div style="margin-top: 20px;" id="contacts">
+  <section id="teacher" class="teacher-section">
+    <div class="teacher-text">
+      <h2>О преподавателе</h2>
+      <p>Меня зовут Сюзанна. Я преподаватель английского языка с 15-летним опытом. Работала за рубежом, преподавала в школах, а сейчас веду свою авторскую онлайн-программу.</p>
+      <div id="contacts">
         <p>Меня можно найти здесь:</p>
-        <a href="https://www.instagram.com/suzanna_english_teacher/" target="_blank" style="margin-right: 10px;">
-          <i class="fab fa-instagram fa-2x" style="color: #E4405F;"></i>
-        </a>
-        <a href="https://www.facebook.com/yourprofile" target="_blank" style="margin-right: 10px;">
-          <i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i>
-        </a>
-        <a href="https://vk.com/suzanna0902" target="_blank" style="margin-right: 10px;">
-            <i class="fab fa-vk fa-2x" style="color: #1877F2;"></i>
+        <div class="social-links">
+          <a href="https://www.instagram.com/suzanna_english_teacher/" target="_blank">
+            <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://wa.me/+84878299758" target="_blank" style="margin-right: 10px;">
-            <i class="fab fa-whatsapp fa-2x" style="color: #3cf218;"></i>
+          <a href="https://www.facebook.com/yourprofile" target="_blank">
+            <i class="fab fa-facebook"></i>
           </a>
-        <a href="https://t.me/Suzanna_teacher" target="_blank" style="margin-right: 10px;">
-          <i class="fab fa-telegram fa-2x" style="color: #0088cc;"></i>
-        </a>
+          <a href="https://vk.com/suzanna0902" target="_blank">
+            <i class="fab fa-vk"></i>
+          </a>
+          <a href="https://wa.me/+84878299758" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://t.me/Suzanna_teacher" target="_blank">
+            <i class="fab fa-telegram"></i>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="teacher-photo" style="flex: 1; text-align: center;">
-        <img src="https://i.ibb.co/9HMqyQZs/c-Z0qj-Sl-BU6-U.jpg" alt="Сюзанна" style="width: 500px; height: auto;" />
+    <div class="teacher-photo">
+       <img src="https://i.ibb.co/9HMqyQZs/c-Z0qj-Sl-BU6-U.jpg" alt="Сюзанна" style="width: 500px; height: auto;" />
     </div>
   </section>
-  <!-- Секция кнопки запуска теста -->
-<section style="background-color: #e6f0ff; padding: 40px 20px; text-align: center;">
-  <h2>Узнай свой уровень английского</h2>
-  <button id="startTestBtn" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Начать тест</button>
-</section>
 
-<!-- Модальное окно с тестом -->
-<div id="testModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
-  <div style="background:white; padding:20px; border-radius:10px; width:90%; max-width:500px; position:relative;">
-    <span class="closeModal" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
-    <h3>English Level Test</h3>
-    <div id="questionContainer"></div>
-    <div style="margin-top:20px;">
-      <button id="prevBtn" disabled>Назад</button>
-      <button id="nextBtn">Далее</button>
-      <button id="checkBtn" style="display:none;">Проверить</button>
+  <section class="test-section">
+    <h2>Узнай свой уровень английского</h2>
+    <button id="startTestBtn">Начать тест</button>
+  </section>
+
+  <div id="testModal" class="modal">
+    <div class="modal-content">
+      <span class="closeModal">&times;</span>
+      <h3>English Level Test</h3>
+      <div id="questionContainer"></div>
+      <div class="modal-buttons">
+        <button id="prevBtn" disabled>Назад</button>
+        <button id="nextBtn">Далее</button>
+        <button id="checkBtn">Проверить</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Модальное окно с результатом -->
-<div id="resultModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
-  <div style="background:white; padding:20px; border-radius:10px; width:90%; max-width:500px; position:relative;">
-    <span class="closeModal" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
-    <h3 style="color: green;">Спасибо, что выбрали нас!</h3>
-    <p id="finalResult" style="font-weight:bold; color: green;"></p>
-    <label for="username">Введите ваше имя:</label><br>
-    <input type="text" id="username" placeholder="Ваше имя" style="margin:10px 0; padding:5px; width:100%;" />
-    <button id="submitBtn">Отправить</button>
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <span class="closeModal">&times;</span>
+      <h3>Спасибо, что выбрали нас!</h3>
+      <p id="finalResult"></p>
+      <input type="text" id="username" placeholder="Ваше имя">
+      <button id="submitBtn">Отправить</button>
+    </div>
   </div>
-</div>
 
-<script>
-const questions = [
-  { question: "1. What's your name?", options: ["She is Anna.", "My name is Anna.", "I name is Anna."], answer: 1 },
-  { question: "2. How old ___ you?", options: ["is", "are", "do"], answer: 1 },
-  { question: "3. He ___ to school every day.", options: ["go", "goes", "going"], answer: 1 },
-  { question: "4. I ___ never been to London.", options: ["has", "did", "have"], answer: 2 },
-  { question: "5. This is the ___ book I’ve ever read!", options: ["most interesting", "more interesting", "interestinger"], answer: 0 },
-  { question: "6. If I ___ more money, I would travel the world.", options: ["have", "had", "will have"], answer: 1 },
-  { question: "7. Which sentence is correct?", options: ["She can to play the guitar.", "She cans play the guitar.", "She can play the guitar."], answer: 2 },
-  { question: "8. He is very good ___ tennis.", options: ["at", "on", "in"], answer: 0 },
-  { question: "9. I’m looking forward to ___ you soon.", options: ["see", "seeing", "seen"], answer: 1 },
-  { question: "10. The film was ___ than I expected.", options: ["more boring", "boringer", "most boring"], answer: 0 },
-  { question: "11. He speaks English very ___.", options: ["good", "well", "nice"], answer: 1 },
-  { question: "12. I don’t have ___ apples left.", options: ["some", "any", "a"], answer: 1 },
-  { question: "13. What does “rarely” mean?", options: ["very often", "almost never", "every day"], answer: 1 },
-  { question: "14. Which word is an antonym of “happy”?", options: ["excited", "sad", "joyful"], answer: 1 },
-  { question: "15. Complete: “Would you mind ___ the window?”", options: ["to open", "opening", "open"], answer: 1 },
-  { question: "16. Despite the heavy rain, the match continued as planned.", options: ["The match was delayed.", "The rain stopped the match.", "The match went on in the rain.", "The match was cancelled."], answer: 2 }
-];
-
-let currentQuestion = 0;
-const answers = [];
-
-const modal = document.getElementById("testModal");
-const resultModal = document.getElementById("resultModal");
-const questionContainer = document.getElementById("questionContainer");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const checkBtn = document.getElementById("checkBtn");
-const finalResult = document.getElementById("finalResult");
-
-function renderQuestion(index) {
-  const q = questions[index];
-  let html = `<p>${q.question}</p>`;
-  q.options.forEach((opt, i) => {
-    html += `<label><input type="radio" name="q${index}" value="${i}" ${answers[index] === i ? 'checked' : ''}/> ${opt}</label><br>`;
-  });
-  questionContainer.innerHTML = html;
-}
-
-function checkResult() {
-  let correct = 0;
-  questions.forEach((q, i) => {
-    if (answers[i] === q.answer) correct++;
-  });
-  let level = "";
-  if (correct <= 5) level = "Beginner";
-  else if (correct <= 10) level = "Intermediate";
-  else if (correct <= 13) level = "Upper-Intermediate";
-  else level = "Advanced";
-  finalResult.textContent = `Ваш уровень английского согласно тесту: ${level}`;
-  modal.style.display = "none";
-  resultModal.style.display = "flex";
-}
-
-function resetTest() {
-  currentQuestion = 0;
-  answers.length = 0;
-  questionContainer.innerHTML = "";
-  prevBtn.disabled = true;
-  nextBtn.style.display = "inline-block";
-  checkBtn.style.display = "none";
-}
-
-document.getElementById("startTestBtn").onclick = () => {
-  resetTest();
-  modal.style.display = "flex";
-  renderQuestion(currentQuestion);
-};
-
-nextBtn.onclick = () => {
-  const selected = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
-  if (selected) answers[currentQuestion] = parseInt(selected.value);
-  if (currentQuestion < questions.length - 1) {
-    currentQuestion++;
-    renderQuestion(currentQuestion);
-  }
-  prevBtn.disabled = false;
-  if (currentQuestion === questions.length - 1) {
-    nextBtn.style.display = "none";
-    checkBtn.style.display = "inline-block";
-  }
-};
-
-prevBtn.onclick = () => {
-  if (currentQuestion > 0) {
-    currentQuestion--;
-    renderQuestion(currentQuestion);
-    nextBtn.style.display = "inline-block";
-    checkBtn.style.display = "none";
-  }
-  if (currentQuestion === 0) prevBtn.disabled = true;
-};
-
-checkBtn.onclick = checkResult;
-
-document.querySelectorAll(".closeModal").forEach(btn => {
-  btn.onclick = () => {
-    modal.style.display = "none";
-    resultModal.style.display = "none";
-    resetTest();
-  };
-});
-
-document.getElementById("submitBtn").onclick = () => {
-  const name = document.getElementById("username").value.trim();
-  if (name) {
-    alert(`Результат отправлен! Спасибо, ${name}.`);
-    resultModal.style.display = "none";
-    resetTest();
-  } else {
-    alert("Пожалуйста, введите имя.");
-  }
-};
-</script>
-  <section id="courses" style="padding: 60px 20px; background-color: #f0f4f8;">
-  <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Индивидуальные курсы английского языка</h2>
-  <p style="text-align: center; font-size: 18px; max-width: 700px; margin: 0 auto 40px;">
-    Изучите курсы для вас: повседневная беседа, подготовка к экзаменам, деловой и туристический английский с индивидуальными уроками для достижения языковых целей.
-  </p>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-    <a href="#form" class="card-link";>
-      <div class="price-card">
-        <h3 style="margin-bottom: 10px; font-size: 20px;">Повседневное общение</h3>
-        <p style="font-size: 14px; margin-bottom: 10px;">Базовый курс английского языка</p>
-        <p style="font-weight: bold; font-size: 18px;">1000 ₽ / урок</p>
-      </div>
-    </a>
-
-    <a href="#form" class="card-link">
-      <div class="price-card">
-        <h3 style="margin-bottom: 10px; font-size: 20px;">Подготовка к экзаменам</h3>
-        <p style="font-size: 14px; margin-bottom: 10px;">Курс для сдачи международных экзаменов</p>
-        <p style="font-weight: bold; font-size: 18px;">1300 ₽ / урок</p>
-      </div>
-    </a>
-
-    <a href="#form" class="card-link">
-      <div class="price-card">
-        <h3 style="margin-bottom: 10px; font-size: 20px;">Деловой английский</h3>
-        <p style="font-size: 14px; margin-bottom: 10px;">Курс для профессионального общения</p>
-        <p style="font-weight: bold; font-size: 18px;">1600 ₽ / урок</p>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-  <section style="background: url('https://i.ibb.co/LTBWhPX/composite-image-youn.jpg') center center / cover no-repeat; padding: 80px 20px; color: white; text-align: center;">
-    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; max-width: 900px; margin: 0 auto; border-radius: 20px;">
-      <h2 style="font-size: 32px; margin-bottom: 20px;">Английский — язык будущего</h2>
-      <p style="font-size: 20px; line-height: 1.6;">
-        Весь современный мир построен на английском: от технологий и IT до образования и карьерных возможностей за рубежом. <br>
-        Откройте двери к глобальным возможностям для себя и своих детей — начните учить английский уже сегодня.
-      </p>
+  <section id="courses" class="courses-section">
+    <h2>Индивидуальные курсы английского языка</h2>
+    <p class="courses-description">Изучите курсы для вас: повседневная беседа, подготовка к экзаменам, деловой и туристический английский.</p>
+    <div class="courses-grid">
+      <a href="#form" class="card-link">
+        <div class="price-card">
+          <h3>Повседневное общение</h3>
+          <p>Базовый курс английского языка</p>
+          <p class="price">1000 ₽ / урок</p>
+        </div>
+      </a>
+      <a href="#form" class="card-link">
+        <div class="price-card">
+          <h3>Подготовка к экзаменам</h3>
+          <p>Курс для сдачи международных экзаменов</p>
+          <p class="price">1300 ₽ / урок</p>
+        </div>
+      </a>
+      <a href="#form" class="card-link">
+        <div class="price-card">
+          <h3>Деловой английский</h3>
+          <p>Курс для профессионального общения</p>
+          <p class="price">1600 ₽ / урок</p>
+        </div>
+      </a>
     </div>
   </section>
-  <section id="why-us" style="padding: 60px 20px; background-color: #ffffff;">
-  <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Почему мы?</h2>
-  <p style="text-align: center; font-size: 18px; max-width: 700px; margin: 0 auto 40px;">
-    Индивидуальные уроки для развития разговорных навыков с гибким расписанием и комфортной атмосферой.
-  </p>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-    <div style="flex: 1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); max-width: 300px;">
-      <h3 style="margin-bottom: 10px; font-size: 20px;">Индивидуальные уроки</h3>
-      <p style="font-size: 14px;">Занятия проводятся с учётом индивидуальных потребностей и целей каждого ученика.</p>
+  <section class="english-future">
+    <div class="future-content">
+      <h2>Английский — язык будущего</h2>
+      <p>Весь современный мир построен на английском: от технологий и IT до образования и карьерных возможностей за рубежом.</p>
     </div>
+  </section>
 
-    <div style="flex: 1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); max-width: 300px;">
-      <h3 style="margin-bottom: 10px; font-size: 20px;">Акцент на разговорной практике</h3>
-      <p style="font-size: 14px;">Занятия направлены на развитие уверенности в использовании языка в повседневной жизни.</p>
+  <section id="why-us" class="why-us-section">
+    <h2>Почему мы?</h2>
+    <p>Индивидуальные уроки для развития разговорных навыков с гибким расписанием.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Индивидуальные уроки</h3>
+        <p>Занятия проводятся с учётом индивидуальных потребностей.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Акцент на разговорной практике</h3>
+        <p>Развитие уверенности в использовании языка.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Культурная осведомлённость</h3>
+        <p>Учёт культурных особенностей.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Удобное расписание</h3>
+        <p>Возможность выбрать удобное время.</p>
+      </div>
     </div>
+  </section>
 
-    <div style="flex: 1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); max-width: 300px;">
-      <h3 style="margin-bottom: 10px; font-size: 20px;">Культурная осведомлённость</h3>
-      <p style="font-size: 14px;">Учёт культурных особенностей помогает преодолеть языковые барьеры и улучшить понимание языка.</p>
+  <section id="reviews" class="reviews-section">
+    <h2>Отзывы учеников</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <h3>Алина</h3>
+        <p>"Спасибо Сюзанне за индивидуальный подход!"</p>
+      </div>
+      <div class="review-card">
+        <h3>Дмитрий</h3>
+        <p>"Подготовка к IELTS прошла на высшем уровне!"</p>
+      </div>
     </div>
-
-    <div style="flex: 1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); max-width: 300px;">
-      <h3 style="margin-bottom: 10px; font-size: 20px;">Удобное расписание</h3>
-      <p style="font-size: 14px;">Возможность выбрать удобное время для занятий, чтобы максимально эффективно использовать своё время.</p>
-    </div>
-
-  </div>
-</section>
-
-  <section id="reviews" style="padding: 50px 20px; background-color: #f1f1f1;">
-  <h2 style="text-align: center; font-size: 30px; margin-bottom: 30px;">Отзывы учеников</h2>
-
-  <!-- Карточки отзывов -->
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-    <div style="background: white; border-radius: 10px; padding: 15px; max-width: 280px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-      <!--<img src="https://i.ibb.co/zPFrvPH/avatar1.png" alt="Аватар" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px;">-->
-      <h3 style="margin: 5px 0;">Алина</h3>
-      <p style="font-size: 14px; font-style: italic;">"Спасибо Сюзанне за индивидуальный подход — разговорный английский стал моим сильным местом!"</p>
-    </div>
-
-    <div style="background: white; border-radius: 10px; padding: 15px; max-width: 280px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-      <!--<img src="https://i.ibb.co/9NZHBgY/avatar2.png" alt="Аватар" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px;">-->
-      <h3 style="margin: 5px 0;">Дмитрий</h3>
-      <p style="font-size: 14px; font-style: italic;">"Подготовка к IELTS прошла на высшем уровне — получил балл выше ожидаемого! Рекомендую!"</p>
-    </div>
-
-  </div>
-</section>
-  
-    <!-- Форма добавления отзыва -->
-    <form style="margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; background: hsla(30, 6%, 94%, 0.759); padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-      <h3 style="margin-bottom: 15px; text-align: center;">Оставить отзыв</h3>
-  
-      <label style="font-size: 14px;">Имя</label><br>
-      <input type="text" name="name" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;">
-  
-      <label style="font-size: 14px;">Комментарий</label><br>
-      <textarea name="comment" rows="3" required style="width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
-  
-      <!--<label style="font-size: 14px;">Фото (необязательно)</label><br>
-      <input type="file" name="photo" accept="image/*" style="margin-bottom: 15px;">-->
-  
-      <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 6px; font-size: 15px; cursor: pointer;">
-        Отправить отзыв
-      </button>
+    <form class="review-form">
+      <h3>Оставить отзыв</h3>
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <textarea name="comment" placeholder="Ваш отзыв" required></textarea>
+      <button type="submit">Отправить отзыв</button>
     </form>
   </section>
 
-  <!--<section class="section">
-    <h2>Первое занятие бесплатно!</h2>
-    <p>Попробуйте и убедитесь сами — индивидуальный подход, результат с первого урока.</p>
-    <a href="#form" class="button">Записаться</a>
-  </section>-->
-
-  <section class="section form-section" id="form">
+  <section id="form" class="form-section">
     <h2>Записаться на урок</h2>
     <form action="mailto:siuzanna0902@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Ваше имя" required />
-      <input type="text" name="contact" placeholder="Контакт (телеграм, ватсап, телефон, e-mail)" required />
-      <input type="text" name="age" placeholder="Возраст ученика" />
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="text" name="contact" placeholder="Контакт" required>
+      <input type="text" name="age" placeholder="Возраст ученика">
       <textarea name="comment" placeholder="Если есть что добавить"></textarea>
       <button type="submit">Отправить</button>
     </form>
-    <br>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
